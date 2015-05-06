@@ -113,4 +113,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MARKDOWN_EXTENSIONS = 'extra', 'codehilite'
+MARKDOWN_EXTENSION_CONFIGS = {
+    'codehilite': {
+        'linenums': False,
+    }
+}
+
 

@@ -5,8 +5,18 @@ class EntryQuerySet(models.QuerySet):
     def published(self):
         return self.filter(publish=True)
 
+class Tag(models.Model):
+    slug = models.SlugField(max_length=200, unique=True)
+
+    def __str__(self):
+        return self.slug
+
 class Entry(models.Model):
     title = models.CharField(max_length=200)
+    photo = models.ImageField(upload_to='static/images/%Y/%m/%d', null=True)
+    headerline = models.TextField(max_length=100, default="Header Line")
+    header_desc = models.TextField(max_length=200, default="Short description")
+    tags = models.ManyToManyField(Tag)
     body = models.TextField()
     slug = models.SlugField(max_length=200, unique=True)
     publish = models.BooleanField(default=False)
@@ -14,6 +24,9 @@ class Entry(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     objects = EntryQuerySet.as_manager()
+
+    def get_absolute_url(self):
+      return reverse("entry_detail", kwargs={"slug": self.slug})
 
     def __str__(self):
         return self.title

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load django_markdown %}
+
+
+{% block header %}
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('/{{object.photo}}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{object.headerline}}</h1>
+                        <h2 class="subheading">{{object.header_desc}}</h2>
+                        <span class="meta">Posted by <a href="/about-me">evilroot</a> on {{object.created}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+    <!-- Post Content -->
+{% block entry %}
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  {{ object.body|markdown}}
+                      <p>tags: {{  object.tags.all|join:", " }}</p>
+                </div>
+            </div>
+        </div>
+    </article>
+{% endblock %}

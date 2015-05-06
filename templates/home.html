@@ -4,10 +4,10 @@
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            {{ object.title }}
+                            <a href="/post/{{object.slug}}">{{ object.title }}</a>
                         </h2>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on {{ object.created }}</p>
+                    <p class="post-meta">Posted by <a href="/about-me">evilroot</a> on {{ object.created }}</p>
                 </div>
                 <hr>
 {% endfor %}
