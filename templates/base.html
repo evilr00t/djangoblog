@@ -1,6 +1,5 @@
 {% load staticfiles %}
-
-
+{% load compress %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +16,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/static/css/clean-blog.min.css" rel="stylesheet">
+    {% compress css %}
+    <!--<link href="/static/css/clean-blog.min.css" rel="stylesheet">-->
+    <link type="text/less" rel="stylesheet" charset="utf-8" href="/static/less/clean-blog.less" />
     <link href="/static/css/github.css" rel="stylesheet">
+    {% endcompress %}
 
 
     <!-- Custom Fonts -->

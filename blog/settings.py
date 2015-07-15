@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -39,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'eblog',
     'django_markdown',
+    'compressor'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -120,4 +120,19 @@ MARKDOWN_EXTENSION_CONFIGS = {
     }
 }
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+COMPRESS_ENABLED = True
+COMPRESS_ROOT=os.path.join(BASE_DIR, "static")
 
+
+COMPRESS_PRECOMPILERS = (
+    ('text/coffeescript', 'coffee --compile --stdio'),
+    ('text/less', 'lessc {infile} {outfile}'),
+)
+
+COMPRESS_CSS_FILTERS = ["compressor.filters.yuglify.YUglifyCSSFilter"]
+COMPRESS_JS_FILTERS = ["compressor.filters.yuglify.YUglifyJSFilter"]
