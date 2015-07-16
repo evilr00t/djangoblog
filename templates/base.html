@@ -1,6 +1,5 @@
 {% load staticfiles %}
-
-
+{% load compress %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +11,12 @@
     <meta name="author" content="evilroot">
 
     <title>evilroot's blog</title>
-
-    <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="/static/css/clean-blog.min.css" rel="stylesheet">
+    {% compress css %}
+    <link type="text/less" rel="stylesheet" charset="utf-8" href="/static/less/clean-blog.less" />
     <link href="/static/css/github.css" rel="stylesheet">
+    {% endcompress %}
+
 
 
     <!-- Custom Fonts -->
@@ -151,15 +149,15 @@
     </footer>
 
 
-
-    <!-- jQuery -->
+<!-- JS --->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" charset="utf-8"></script>
-    <!-- Bootstrap Core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="/static/js/clean-blog.min.js"></script>
-
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-history/1.9/jquery.history.min.js"></script>
+    <script src="https://raw.githubusercontent.com/browserstate/history.js/master/scripts/bundled/html4%2Bhtml5/jquery.history.js" charset="utf-8"></script>
+{% compress js %}
+    <script src="/static/js/clean-blog.js"></script>
+    <script type="text/coffeescript" src="/static/coffee/main.coffee" charset="utf-8"></script>
+{% endcompress %}
 </body>
 
 </html>
