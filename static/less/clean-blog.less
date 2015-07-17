@@ -4,7 +4,7 @@
 // Global Components
 
 body {
-	.serif;
+	.sans-serif;
 	font-size: 20px;
 	color: @gray-dark;
 }
@@ -14,9 +14,6 @@ body {
 p {
 	line-height: 1.5;
 	margin: 30px 0;
-	a {
-		text-decoration: underline;
-	}
 }
 
 h1,
@@ -33,7 +30,8 @@ a {
 	color: @gray-dark;
 	&:hover,
 	&:focus {
-		color: @brand-primary;
+		color: @link;
+		text-decoration: none;
 	}
 }
 
@@ -86,17 +84,17 @@ hr.small {
 			padding: 20px;
 			&:hover,
 			&:focus {
-				color: @white-faded;
+				color: lighten(@link, 20%);
 			}
 		}
 		.nav {
 			li {
 				a {
-					color: white;
+					color: @link;
 					padding: 20px;
 					&:hover,
 					&:focus {
-						color: @white-faded;
+						color: lighten(@link, 20%);
 					}
 				}
 			}
@@ -127,7 +125,7 @@ hr.small {
 				color: @gray-dark;
 				&:hover,
 				&:focus {
-					color: @brand-primary;
+					color: darken(@gray-dark, 20%);
 				}
 			}
 			.nav {
@@ -136,7 +134,7 @@ hr.small {
 						color: @gray-dark;
 						&:hover,
 						&:focus {
-							color: @brand-primary;
+							color: lighten(@link, 20%);
 						}
 					}
 				}
@@ -156,8 +154,8 @@ hr.small {
 // Header
 
 .intro-header {
-	background-color: @gray; 
-	background: no-repeat center center; 
+	background-color: @gray;
+	background: no-repeat center center;
 	background-attachment: scroll;
 	.background-cover;
 	// NOTE: Background images are set within the HTML using inline CSS!
@@ -166,6 +164,7 @@ hr.small {
 	.post-heading,
 	.page-heading {
 		padding: 100px 0 50px;
+		text-shadow: 0 2px 5px rgba(0,0,0,0.6);
 		color: white;
 		@media only screen and (min-width: 768px) {
 			padding: 150px 0;
@@ -180,6 +179,7 @@ hr.small {
 		}
 		.subheading {
 			font-size: 24px;
+			text-shadow: 0 2px 5px rgba(0,0,0,0.6);
 			line-height: 1.1;
 			display: block;
 			.sans-serif;
@@ -213,7 +213,7 @@ hr.small {
 			font-weight: 300;
 			font-size: 20px;
 			a {
-				color: white;
+				color: @link;
 			}
 		}
 		@media only screen and (min-width: 768px) {
@@ -234,8 +234,7 @@ hr.small {
 		color: @gray-dark;
 		&:hover,
 		&:focus {
-			text-decoration: none;
-			color: @brand-primary;
+			color: @link;
 		}
 		> .post-title {
 			font-size: 30px;
@@ -254,14 +253,17 @@ hr.small {
 		font-style: italic;
 		margin-top: 0;
 		> a {
-			text-decoration: none;
-			color: @gray-dark;
+			font-style: bold;
+			color: @link;
 			&:hover,
 			&:focus {
-				color: @brand-primary;
-				text-decoration: underline;
+				color: lighten(@link, 25%);
 			}
 		}
+		> span {
+		color: @date-color;
+		}
+
 	}
 	@media only screen and (min-width: 768px) {
 		> a {
@@ -292,6 +294,8 @@ hr.small {
 }
 
 footer {
+	background: #303030;
+	color: #D3D3D3;
 	padding: 50px 0 65px;
 	.list-inline {
 		margin: 0;
@@ -301,6 +305,13 @@ footer {
 		font-size: 14px;
 		text-align: center;
 		margin-bottom: 0;
+	}
+	a {
+		color: @link;
+		&:hover,
+		&:focus {
+			color: lighten(@link, 25%);
+		}
 	}
 }
 
@@ -412,8 +423,8 @@ form .row:first-child .floating-label-form-group {
 		> a:hover,
 		> a:focus {
 			color: white;
-			background-color: @brand-primary;
-			border: 1px solid @brand-primary;
+			background-color: @link;
+			border: 1px solid @link;
 		}
 	}
 
