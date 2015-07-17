@@ -9,3 +9,6 @@ class BlogIndex(generic.ListView):
 class BlogDetail(generic.DetailView):
     model = models.Entry
     template_name = "post.html"
+
+class AboutMe(generic.TemplateView):
+    template_name = "aboutme.html"

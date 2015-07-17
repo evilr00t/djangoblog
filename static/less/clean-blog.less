@@ -57,6 +57,7 @@ hr.small {
 // Navigation
 
 .navbar-custom {
+	text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -70,7 +71,7 @@ hr.small {
 		li {
 			a {
 				text-transform: uppercase;
-				font-size: 12px;
+				font-size: 15px;
 				font-weight: 800;
 				letter-spacing: 1px;
 			}
@@ -90,10 +91,12 @@ hr.small {
 		.nav {
 			li {
 				a {
+					background: fade(white,90%);
 					color: @link;
 					padding: 20px;
 					&:hover,
 					&:focus {
+						background: fade(white,90%);
 						color: lighten(@link, 20%);
 					}
 				}
