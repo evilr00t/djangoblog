@@ -56,8 +56,12 @@ hr.small {
 
 // Navigation
 
+.container-fluid {
+	background: fade(white, 20%);
+}
+
 .navbar-custom {
-	text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -91,12 +95,11 @@ hr.small {
 		.nav {
 			li {
 				a {
-					background: fade(white,90%);
 					color: @link;
 					padding: 20px;
 					&:hover,
 					&:focus {
-						background: fade(white,90%);
+						background: fade(white,70%);
 						color: lighten(@link, 20%);
 					}
 				}
