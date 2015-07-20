@@ -53,7 +53,7 @@
       </div><!--/.nav-collapse -->
     </div>
   </div>
-
+  {% block header %}
   <div id="headerwrap" style="background-image: url('/static/img/home-bg.jpg');">
       <div class="container">
       <div class="row">
@@ -64,18 +64,21 @@
       </div><!-- row -->
       </div> <!-- /container -->
   </div>
+{% endblock %}
+  {% block entry %}
+      <div class="container">
+          <div class="row centered mt">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              {% block blog_entries %}
 
-<div class="container">
-  <div class="row centered mt">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-</div>
-</div>
 
+  {% endblock %}
+
+              </div>
+          </div>
+      </div>
+  {% endblock %}
+      <hr>
 <footer id="footerwrap">
 <div class="container-fluid text-center">
   <div class="row">

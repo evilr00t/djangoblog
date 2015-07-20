@@ -29,7 +29,7 @@ h6 {
   color: #1abc9c;
 }
 .mt {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .navbar-collapse.in {
   padding-bottom: 40px;
@@ -72,4 +72,19 @@ h6 {
   padding-top: 55px;
   padding-bottom: 50px;
   background-color: #303030;
+
+  a {
+    color: @link;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: lighten(@link, 20%);
+    }
+  }
+
+  .copyright {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
 }
