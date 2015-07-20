@@ -1,0 +1,73 @@
+@import "variables.less";
+body {
+  .sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: @h-color;
+}
+.navbar-brand {
+  font-weight: 700;
+}
+.navbar-default .navbar-brand {
+  color: #1abc9c;
+}
+.navbar-default {
+  background-color: fade(#ffffff, 20%);
+  border-color: transparent;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #1abc9c;
+}
+.mt {
+  margin-top: 30px;
+}
+.navbar-collapse.in {
+  padding-bottom: 40px;
+}
+#headerwrap {
+  background: no-repeat center top;
+  margin-top: -70px;
+  padding-top: 100px;
+  text-align: center;
+  background-attachment: scroll;
+  background-position: center center;
+  min-height: 450px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  h1 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    letter-spacing: 4px;
+    font-size: 70px;
+    color: @h-text-color;
+    font-weight: bold;
+  }
+  h4 {
+    color: @h-text-color;
+    font-weight: 400;
+  }
+}
+#footerwrap {
+  color: #d3d3d3;
+  margin-top: 50px;
+  padding-top: 55px;
+  padding-bottom: 50px;
+  background-color: #303030;
+}
