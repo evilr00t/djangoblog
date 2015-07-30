@@ -15,6 +15,14 @@ h6 {
   font-weight: 700;
   color: @h-color;
 }
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:4px !important;
+    padding-bottom:0 !important;
+    height: 30px;
+}
+.navbar {min-height:30px !important;}
+
 .navbar-brand {
   font-weight: 700;
 }
@@ -22,11 +30,23 @@ h6 {
   color: #1abc9c;
 }
 .navbar-default {
-  background-color: fade(#ffffff, 20%);
+  background-color: black;
   border-color: transparent;
 }
+
+
 .navbar-default .navbar-nav > li > a {
-  color: #1abc9c;
+  color: @navbar-link !important;
+
+  &:focus,
+  &:hover {
+    color: lighten(@link, 10%) !important;
+    background-color: black !important;
+  }
+}
+.navbar-default .navbar-nav > .active > a{
+    color: @link !important;
+    background-color: #000000 !important;
 }
 .mt {
   margin-top: 50px;
