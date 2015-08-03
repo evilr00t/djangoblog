@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% block blog_entries %}
 {% for object in object_list %}
-
-
+<div class="posts">
 <h1><a href="/post/{{object.slug}}">{{ object.title }}</a></h1>
-<span>{{ object.created|date:"d/m/Y"}}</span>
 <p class="post-meta">Posted by <a href="#">evilroot</a> on <span>{{ object.created|date:"d/m/Y"}}</span></p>
 <hr/>
+</div>
 {% endfor %}
 {% endblock %}

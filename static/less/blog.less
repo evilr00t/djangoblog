@@ -12,8 +12,15 @@ h3,
 h4,
 h5,
 h6 {
+
   font-weight: 700;
   color: @h-color;
+}
+
+
+.posts {
+  color: #000;
+//  font-family: 'Indie Flower', cursive;
 }
 
 .navbar-nav > li > a, .navbar-brand {
@@ -27,7 +34,14 @@ h6 {
   font-weight: 700;
 }
 .navbar-default .navbar-brand {
-  color: #1abc9c;
+  color: @navbar-link;
+  font-family: 'Indie Flower', cursive;
+
+  &:focus,
+  &:hover {
+    color: lighten(@navbar-link, 20%) !important;
+    background-color: black !important;
+  }
 }
 .navbar-default {
   background-color: black;
@@ -36,32 +50,35 @@ h6 {
 
 
 .navbar-default .navbar-nav > li > a {
-  color: @navbar-link !important;
+  font-family: 'Indie Flower', cursive;
+  color: #1ABC9C !important;
+  font-size: 1em;
+  font-weight: 400;
 
   &:focus,
   &:hover {
-    color: lighten(@link, 10%) !important;
+    color: lighten(@navbar-link, 20%) !important;
     background-color: black !important;
   }
 }
 .navbar-default .navbar-nav > .active > a{
-    color: @link !important;
+    color: spin(@navbar-link, 30%) !important;
     background-color: #000000 !important;
 }
 .mt {
   margin-top: 50px;
 }
 .navbar-collapse.in {
-  padding-bottom: 40px;
+  padding-bottom: -10px;
 }
 #headerwrap {
   background: no-repeat center top;
-  margin-top: -70px;
-  padding-top: 100px;
+  margin-top: 30px;
+  padding-top: 150px;
   text-align: center;
   background-attachment: scroll;
   background-position: center center;
-  min-height: 450px;
+  min-height: 500px;
   width: 100%;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -76,14 +93,19 @@ h6 {
     padding-top: 10px;
     padding-bottom: 20px;
     letter-spacing: 4px;
-    font-size: 70px;
+    font-size: 4em;
     color: @h-text-color;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: 'Indie Flower', cursive;
+
   }
-  h4 {
+  h3 {
     text-shadow: 0 2px 5px rgba(0,0,0,0.6);
     color: @h-text-color;
-    font-weight: 400;
+    font-size: 2em;
+    font-weight: 500;
+    font-family: 'Indie Flower', cursive;
+
   }
 }
 #footerwrap {
