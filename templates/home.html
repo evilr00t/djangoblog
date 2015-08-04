@@ -1,19 +1,10 @@
 {% extends "base.html" %}
 {% block blog_entries %}
 {% for object in object_list %}
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            <a href="/post/{{object.slug}}">{{ object.title }}</a>
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">evilroot</a> on <span>{{ object.created|date:"d/m/Y"}}</span></p>
-                </div>
-                <hr>
+<div class="posts">
+<h1><a href="/post/{{object.slug}}">{{ object.title }}</a></h1>
+<p class="post-meta">Posted by <a href="#">evilroot</a> on <span>{{ object.created|date:"d/m/Y"}}</span></p>
+<hr/>
+</div>
 {% endfor %}
-<ul class="pager">
-    <li class="next">
-        <a href="#">Older Posts &rarr;</a>
-    </li>
-</ul>
 {% endblock %}
