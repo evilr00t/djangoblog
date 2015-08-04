@@ -12,15 +12,38 @@ h3,
 h4,
 h5,
 h6 {
-
   font-weight: 700;
   color: @h-color;
 }
 
 
 .posts {
-  color: #000;
-//  font-family: 'Indie Flower', cursive;
+  a {
+    color: #404040;
+    text-decoration: none;
+
+  &:hover {
+    color: lighten(@link, 5%);
+  }
+}
+  h1 {
+    font-weight: 500;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+      color: #000;
+  }
+  .post-meta {
+    font-weight: 200;
+    a {
+    //  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    //  color: @navbar-link;
+    font-weight: 300;
+    color: spin(@navbar-link, 30%);
+    &:hover {
+      font-weight: 400;
+    }
+    }
+
+  }
 }
 
 .navbar-nav > li > a, .navbar-brand {
@@ -44,7 +67,7 @@ h6 {
   }
 }
 .navbar-default {
-  background-color: black;
+  background-color: #000;
   border-color: transparent;
 }
 
