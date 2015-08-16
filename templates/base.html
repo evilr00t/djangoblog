@@ -55,7 +55,7 @@
     </div>
   </div>
   {% block header %}
-  <div id="headerwrap" style="background-image: url('/static/img/home-bg.jpg');">
+  <div id="headerwrap" style="background-image: url('/static/img/home-bg.jpg');" data-stellar-background-ratio="0.1">
       <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -118,6 +118,7 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
 {% compress js %}
 <script src="/static/js/fluidvids.min.js"></script>
 <script>
@@ -125,6 +126,7 @@ fluidvids.init({
   selector: ['iframe'],
   players: ['www.youtube.com', 'player.vimeo.com']
 });
+$(window).stellar({horizontalScrolling:false, responsive:true, scrollProperty: 'transform'})
 </script>
 {% endcompress %}
 
