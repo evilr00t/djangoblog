@@ -38,7 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'eblog',
     'django_markdown',
-    'compressor'
+    'compressor',
+    'hitcount'
 )
 
 MIDDLEWARE_CLASSES = (
